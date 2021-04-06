@@ -2,7 +2,7 @@ import { Switch, Redirect, Route } from "react-router-dom";
 import Error404 from "@/pages/error/404.jsx";
 import { getCache } from "@/utils/session";
 
-export default (props) => {
+const routerView = (props) => {
   const { route } = props;
   return (
     <Switch>
@@ -18,15 +18,17 @@ export default (props) => {
         }}
       ></Route>
       {route.map((item) => {
-        const Copm = item.component;
+        const Component = item.component;
         return (
           <Route
+            key={item.path}
             path={item.path}
             exact={item.exact}
-            component={(childRoute) => {
-              return <Copm routes={item.children} {...childRoute}></Copm>;
+            render={(props) => {
+              return (
+                <Component {...props} routes={item.children || []}></Component>
+              );
             }}
-            key={item.path}
           ></Route>
         );
       })}
@@ -34,3 +36,5 @@ export default (props) => {
     </Switch>
   );
 };
+
+export default routerView;

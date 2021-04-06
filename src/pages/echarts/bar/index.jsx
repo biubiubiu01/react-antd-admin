@@ -1,12 +1,12 @@
-import { Row, Col, Card } from "antd";
+import { Row, Col, Card } from 'antd'
 import {
   GradientsBar,
   MoreBar,
   DoubleBar,
   GroupBar,
   PieBar,
-} from "./components";
-import "@/styles/echarts.less";
+} from './components'
+import '@/styles/echarts.less'
 
 const Bar = (props) => {
   return (
@@ -52,7 +52,7 @@ const Bar = (props) => {
         </Col>
       </Row>
     </div>
-  );
-};
+  )
+}
 
-export default Bar;
+export default Bar

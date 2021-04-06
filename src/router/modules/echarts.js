@@ -4,6 +4,7 @@ import loadable from "@loadable/component";
 const echartRouter = {
   path: "/app/echarts",
   component: MainLayout,
+  exact: false,
   meta: {
     role: ["admin", "test"],
     title: "图表",
@@ -14,16 +15,19 @@ const echartRouter = {
       path: "/app/echarts/bar",
       component: loadable(() => import("@/pages/echarts/bar/index")),
       meta: { title: "柱状图" },
+      exact: true,
     },
     {
       path: "/app/echarts/line",
       component: loadable(() => import("@/pages/echarts/line/index")),
       meta: { title: "折线图" },
+      exact: true,
     },
     {
       path: "/app/echarts/pie",
       component: loadable(() => import("@/pages/echarts/pie/index")),
       meta: { title: "饼图" },
+      exact: true,
     },
     {
       path: "/app/echarts/graph",
@@ -32,6 +36,7 @@ const echartRouter = {
         role: ["admin"],
         title: "关系图",
       },
+      exact: true,
     },
     {
       path: "/app/echarts/map",
@@ -40,6 +45,7 @@ const echartRouter = {
         role: ["admin"],
         title: "地图",
       },
+      exact: true,
     },
     {
       path: "/app/echarts/other",
@@ -48,6 +54,7 @@ const echartRouter = {
         role: ["admin"],
         title: "其他图表",
       },
+      exact: true,
     },
   ],
 };

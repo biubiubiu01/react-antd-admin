@@ -4,14 +4,13 @@ import "./style.less";
 import { Layout } from "antd";
 import SideBar from "./component/sideBar/index";
 import NavBar from "./component/navBar/index";
-import TagView from "./component/tagView/index";
+// import TagView from "./component/tagView/index";
 import { updateUserInfo } from "@/store/modules/user";
 import { setRoute } from "@/store/modules/permission";
 import { getCache } from "@/utils/session";
 import { getInfo } from "@/api/user";
-import BoxShow from "@/components/BoxShow/index";
+// import BoxShow from "@/components/BoxShow/index";
 import BackTop from "@/components/BackTop/index";
-import { SettingOutlined } from "@ant-design/icons";
 import RouterView from "@/router/routerView";
 
 class layouts extends Component {
@@ -41,13 +40,13 @@ class layouts extends Component {
         <div className={`main-container ${tagShow ? "hasTag" : ""}`}>
           <div className={fixHeader ? "fixed-header" : ""}>
             <NavBar />
-            <BoxShow show={tagShow}>
+            {/* <BoxShow show={tagShow}>
               <TagView />
-            </BoxShow>
+            </BoxShow> */}
           </div>
-          <div className="rightPanl fixed pointer">
+          {/* <div className="rightPanl fixed pointer">
             <SettingOutlined className="settingIcon" />
-          </div>
+          </div> */}
           <div className="app-main">
             <RouterView route={route} />
             <BackTop />
