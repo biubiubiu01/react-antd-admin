@@ -1,9 +1,9 @@
-import { Component } from 'react'
-import { ConfigProvider } from 'antd'
-import zhCN from 'antd/lib/locale/zh_CN'
-import RouterView from './router/routerView'
-import { BrowserRouter as Router } from 'react-router-dom'
-import { baseRoute } from './router/route'
+import { Component } from "react";
+import { ConfigProvider } from "antd";
+import zhCN from "antd/lib/locale/zh_CN";
+import RouterView from "./router/routerView";
+import { HashRouter as Router } from "react-router-dom";
+import { baseRoute } from "./router/route";
 
 export default class App extends Component {
   render() {
@@ -13,6 +13,6 @@ export default class App extends Component {
           <RouterView route={baseRoute} />
         </Router>
       </ConfigProvider>
-    )
+    );
   }
 }
