@@ -1,0 +1,1 @@
+#openMap{background:#fff;width:100%;height:100%;position:relative}.title{position:absolute;top:8px;left:50%;transform:translateX(-50%);font-size:16px;color:rgba(0,0,0,.6)}.direction{position:absolute;top:35px;right:65px;z-index:99}.direction .northImg{width:40px;height:40px;transform:rotate(-45deg);margin-top:10px}#canvas{position:absolute;left:3%;bottom:2%;z-index:99}
